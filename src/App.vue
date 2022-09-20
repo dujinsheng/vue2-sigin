@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-09-10 12:17:21
  * @LastEditors: 顾森
- * @LastEditTime: 2022-09-16 22:11:24
+ * @LastEditTime: 2022-09-21 00:13:19
  * @FilePath: \新建文件夹\sigin\src\App.vue
 -->
 <template>
@@ -14,7 +14,13 @@
     <!-- </nav> -->
   </div>
 </template>
-
+<script>
+  export default {
+    created() {
+      
+    }
+  }
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

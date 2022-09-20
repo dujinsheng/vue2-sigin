@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-09-10 12:17:21
  * @LastEditors: 顾森
- * @LastEditTime: 2022-09-20 16:24:57
+ * @LastEditTime: 2022-09-20 20:07:08
  * @FilePath: \新建文件夹\sigin\src\views\MainView.vue
 -->
 <template>
@@ -115,6 +115,7 @@ export default {
   .leftHeader {
     display: inline-block;
     width: 200px;
+    height: 100%;
     float: left;
   }
   .rightHeader {
@@ -158,5 +159,8 @@ body > .el-container {
 
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
+}
+.el-main {
+  padding: 0px;
 }
 </style>>

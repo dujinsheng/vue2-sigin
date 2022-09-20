@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-09-18 15:52:11
  * @LastEditors: 顾森
- * @LastEditTime: 2022-09-20 16:27:20
+ * @LastEditTime: 2022-09-20 19:56:01
  * @FilePath: \新建文件夹\sigin\src\components\header\JumpStatus.vue
 -->
 <template>
@@ -101,7 +101,7 @@ export default {
   .tagBox {
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 9px;
   }
 }
 ::v-deep .el-breadcrumb__inner {

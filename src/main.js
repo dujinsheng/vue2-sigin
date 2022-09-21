@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-09-10 12:17:21
  * @LastEditors: 顾森
- * @LastEditTime: 2022-09-21 00:38:26
+ * @LastEditTime: 2022-09-21 10:35:02
  * @FilePath: \新建文件夹\sigin\src\main.js
  */
 import Vue from 'vue'
@@ -12,10 +12,7 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 import './style/index.scss'
 import i18n from '@/i18n/i18n.js'
-Vue.use(Element, {
-  i18n: (key, value) => i18n.t(key, value)
-});
-// Vue.use(Element)
+Vue.use(Element)
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-09-21 00:00:35
  * @LastEditors: 顾森
- * @LastEditTime: 2022-09-21 10:45:44
+ * @LastEditTime: 2022-09-21 17:00:35
  * @FilePath: \新建文件夹\sigin\src\i18n\i18n.js
  */
 import Vue from 'vue'
@@ -14,17 +14,17 @@ import zh from './zh'
 Vue.use(VueI18n)
 const i18n = new VueI18n({
   locale: (function () {
-    if (localStorage.getItem('lang')) {
-      return localStorage.getItem('lang')
+    if (localStorage.getItem('language')) {
+      return localStorage.getItem('language')
     }
-    return 'en_UK'
+    return 'English'
   }()),
   messages: {
-    'en_UK': {
+    'English': {
         ...en,
         ...enLocale
     }, //英文语言包
-    'zh_UK': {
+    'Chinese': {
         ...zh,
         ...zhLocale
     }, //中文繁体包

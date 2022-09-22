@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-09-10 12:17:21
  * @LastEditors: 顾森
- * @LastEditTime: 2022-09-20 20:07:08
+ * @LastEditTime: 2022-09-22 14:31:14
  * @FilePath: \新建文件夹\sigin\src\views\MainView.vue
 -->
 <template>
@@ -10,7 +10,7 @@
       <!-- 头部 -->
       <el-header>
         <!-- 此处的三个组件分别为logo,子系统跳转链接，登录状态显示 -->
-        <div class="leftHeader">
+        <div class="leftHeader" @click="clickCancelGetOneAndGetTWO">
           <LogoImage class="logoIcon"></LogoImage>
         </div>
         <div class="rightHeader">
@@ -45,8 +45,8 @@ import JumpStatus from "@/components/header/JumpStatus.vue";
 import LogoImage from "@/components/header/LogoImage.vue";
 import NavMenu from "@/components/sideBar/navMenu.vue";
 
-// import {getOne, getTwo} from '../api/getDataApi'
-// import {postOne, postTwo} from '../api/postDataApi'
+import { getOne, getTwo, sourceOne } from "../api/getDataApi";
+import { postOne, postTwo, sourceTwo } from "../api/postDataApi";
 export default {
   name: "HomeView",
   components: {
@@ -65,10 +65,10 @@ export default {
     // console.log(this.$router)
     // console.log(this.$route.params)
     // console.log(getOne, getTwo, postOne, postTwo)
-    // getOne(123);
-    // getTwo(234);
-    // postOne('www');
-    // postTwo('aaa')
+    getOne(123);
+    getTwo(234);
+    postOne('www');
+    postTwo('aaa')
   },
   mounted() {},
   methods: {
@@ -86,6 +86,13 @@ export default {
           path: nextPath,
         });
       });
+    },
+    // 对于请求进行取消
+    clickCancelGetOneAndGetTWO() {
+      sourceOne['CancelGetOne']('第一条获取数据的请求被取消了')
+      sourceOne['CancelGetTwo']('第二条获取数据的请求被取消了')
+      sourceTwo['CancelPostOne']('第一条postOne请求被取消了')
+      sourceTwo['CancelPostTwo']('第二条postTwo请求被取消了')
     },
   },
   beforeRouteEnter(to, from, next) {
